@@ -56,21 +56,43 @@ This scaffold provides a robust foundation built with:
 
 ## 🚀 Quick Start
 
+### Local Development
+
 ```bash
 # Install dependencies
 bun install
 
+# Setup environment variables
+cp .env.example .env
+# Edit .env and add your configuration
+
+# Initialize database
+bun run db:push
+
 # Start development server
 bun run dev
-
-# Build for production
-bun run build
-
-# Start production server
-bun start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+Open [http://localhost:8888](http://localhost:8888) to see your application running.
+
+### Production Deployment
+
+```bash
+# Deploy to Vercel (recommended)
+vercel --prod
+
+# Or deploy to Railway
+railway up
+
+# See full deployment guide
+See [DEPLOYMENT.md](DEPLOYMENT.md) for complete instructions
+```
+
+📖 **Full Documentation:**
+- [📘 Instruction.md](Instruction.md) - Complete setup guide
+- [🚀 DEPLOYMENT.md](DEPLOYMENT.md) - Production deployment guide  
+- [🔄 MIGRATION.md](MIGRATION.md) - SQLite to PostgreSQL migration
+- [📝 BLOG_SETUP.md](BLOG_SETUP.md) - Blog-specific setup
 
 ## 🤖 Powered by Z.ai
 
