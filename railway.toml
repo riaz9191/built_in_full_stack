@@ -1,0 +1,15 @@
+# Railway Deployment Configuration
+
+# Build Command
+# Railway will automatically detect Next.js
+
+# Environment Variables (Set in Railway Dashboard):
+# DATABASE_URL - Your Railway PostgreSQL connection string
+# IMGBB_API_KEY - Your ImgBB API key
+# NODE_ENV=production
+
+# Start Command (if needed)
+# bun start
+
+# Health Check (optional)
+# Railway will automatically detect Next.js health check
