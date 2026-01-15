@@ -60,17 +60,17 @@ This scaffold provides a robust foundation built with:
 
 ```bash
 # Install dependencies
-bun install
+npm install
 
 # Setup environment variables
 cp .env.example .env
 # Edit .env and add your configuration
 
 # Initialize database
-bun run db:push
+npm run db:push
 
 # Start development server
-bun run dev
+npm run dev
 ```
 
 Open [http://localhost:8888](http://localhost:8888) to see your application running.

@@ -50,7 +50,7 @@ Your project is now configured for **production deployment**! Here's what change
 DATABASE_URL="postgresql://user:pass@host:5432/db"
 
 # 3. Push schema to database:
-bun run db:push
+npm run db:push
 
 # 4. Deploy to Vercel:
 npm i -g vercel
@@ -101,8 +101,8 @@ docker run -p 3000:3000 \
 - [ ] **Test Migration Locally**
   ```bash
   # Update .env with PostgreSQL URL
-  bun run db:push
-  bun run dev
+  npm run db:push
+  npm run dev
   # Test creating a blog post
   ```
   
@@ -200,10 +200,10 @@ These are already in `.gitignore` ✅
 # 1. Get free PostgreSQL from Supabase/Neon
 # 2. Update .env with connection string
 # 3. Run migrations:
-bun run db:push
+npm run db:push
 
 # 4. Test app:
-bun run dev
+npm run dev
 
 # 5. Create a test blog post
 # 6. Verify everything works

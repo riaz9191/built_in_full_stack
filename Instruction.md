@@ -24,7 +24,7 @@ A modern, production-ready personal blog platform built with Next.js, TypeScript
 Before you begin, ensure you have the following installed:
 
 - **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
-- **Bun** (package manager) - [Download](https://bun.sh/)
+- **npm** (package manager) - [Download](https://npm.sh/)
 - **Git** (for version control)
 - **A code editor** (VS Code recommended)
 
@@ -32,7 +32,7 @@ Check your installations:
 
 ```bash
 node --version
-bun --version
+npm --version
 git --version
 ```
 
@@ -47,7 +47,7 @@ Navigate to the project directory and install all dependencies:
 ```bash
 cd /Users/riaz.a/Desktop/PEN/workspace-4dffb2be-cad8-4bc3-833a-2c26930699a9\ \(1\)
 
-bun install
+npm install
 ```
 
 This will install all packages defined in `package.json`.
@@ -57,7 +57,7 @@ This will install all packages defined in `package.json`.
 Confirm that key packages are installed:
 
 ```bash
-bun list @prisma/client next tailwindcss
+npm list @prisma/client next tailwindcss
 ```
 
 ---
@@ -110,7 +110,7 @@ updatedAt   - DateTime
 Push the schema to create the database:
 
 ```bash
-bun run db:push
+npm run db:push
 ```
 
 This command will:
@@ -123,7 +123,7 @@ This command will:
 Create an initial admin user:
 
 ```bash
-bun run db:generate
+npm run db:generate
 node seed.js
 ```
 
@@ -192,7 +192,7 @@ NODE_ENV=development
 Start the development server with hot reload:
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 Expected output:
@@ -209,7 +209,7 @@ Visit **http://localhost:8888** in your browser.
 Build for production:
 
 ```bash
-bun run build
+npm run build
 ```
 
 This command will:
@@ -222,7 +222,7 @@ This command will:
 Run the production server:
 
 ```bash
-bun run start
+npm run start
 ```
 
 ---
@@ -354,32 +354,32 @@ project-root/
 
 ```bash
 # Start development server (with hot reload)
-bun run dev
+npm run dev
 
 # Build for production
-bun run build
+npm run build
 
 # Start production server
-bun run start
+npm run start
 
 # Run ESLint to check code quality
-bun run lint
+npm run lint
 ```
 
 ### Database Operations
 
 ```bash
 # Push schema changes to database (create tables)
-bun run db:push
+npm run db:push
 
 # Generate Prisma client (after schema changes)
-bun run db:generate
+npm run db:generate
 
 # Create and run migrations (development)
-bun run db:migrate
+npm run db:migrate
 
 # Reset database completely (WARNING: deletes all data)
-bun run db:reset
+npm run db:reset
 ```
 
 ### Other Commands
@@ -391,8 +391,8 @@ open http://localhost:8888
 # Check Node version
 node --version
 
-# Check Bun version
-bun --version
+# Check npm version
+npm --version
 ```
 
 ---
@@ -415,7 +415,7 @@ bun --version
 - **Zod** - Schema validation
 
 ### Development Tools
-- **Bun** - Fast JavaScript runtime
+- **npm** - Fast JavaScript runtime
 - **ESLint** - Code quality
 - **TypeScript** - Type checking
 
@@ -435,7 +435,7 @@ bun --version
 ls -la .env
 
 # Restart dev server
-bun run dev
+npm run dev
 ```
 
 ### Issue: Database file not created
@@ -444,7 +444,7 @@ bun run dev
 Run the database push command:
 
 ```bash
-bun run db:push
+npm run db:push
 ```
 
 This will create `db/custom.db` automatically.
@@ -455,9 +455,9 @@ This will create `db/custom.db` automatically.
 Reinstall dependencies:
 
 ```bash
-rm -rf node_modules .bun
-bun install
-bun run db:generate
+rm -rf node_modules .npm
+npm install
+npm run db:generate
 ```
 
 ### Issue: Port 8888 already in use
@@ -470,7 +470,7 @@ Either kill the existing process or use a different port:
 lsof -ti :8888 | xargs kill -9
 
 # Option 2: Use different port
-bun run dev -- -p 3000  # Uses port 3000 instead
+npm run dev -- -p 3000  # Uses port 3000 instead
 ```
 
 ### Issue: ImgBB API key not working
@@ -490,7 +490,7 @@ bun run dev -- -p 3000  # Uses port 3000 instead
 4. Check database has data:
 
 ```bash
-bun run db:migrate
+npm run db:migrate
 ```
 
 ### Issue: Cannot upload images
@@ -513,17 +513,17 @@ bun run db:migrate
 
 ```bash
 # 1. Install dependencies
-bun install
+npm install
 
 # 2. Create .env file with DATABASE_URL
 echo 'DATABASE_URL="file:./db/custom.db"' > .env
 echo 'IMGBB_API_KEY=your_api_key' >> .env
 
 # 3. Initialize database
-bun run db:push
+npm run db:push
 
 # 4. Start development server
-bun run dev
+npm run dev
 
 # 5. Open browser
 open http://localhost:8888

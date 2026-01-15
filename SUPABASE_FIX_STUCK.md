@@ -40,7 +40,7 @@ Click: **Save**
 Run in terminal:
 
 ```bash
-bun run db:push
+npm run db:push
 ```
 
 Should work now! ✅
@@ -65,7 +65,7 @@ DATABASE_URL="postgresql://postgres.wcmdqkcrmpqypasphxfc:Tm0nK5JLchnDW8hL@aws-1-
 Then:
 
 ```bash
-bun run db:push
+npm run db:push
 ```
 
 ---
@@ -157,7 +157,7 @@ After `db:push` succeeds:
 
 ```bash
 # 1. Test locally
-bun run dev
+npm run dev
 
 # 2. Visit http://localhost:8888
 # 3. Create a blog post

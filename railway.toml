@@ -9,7 +9,7 @@
 # NODE_ENV=production
 
 # Start Command (if needed)
-# bun start
+# npm start
 
 # Health Check (optional)
 # Railway will automatically detect Next.js health check

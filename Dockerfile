@@ -1,10 +1,10 @@
-FROM oven/bun:1 as base
+FROM oven/npm:1 as base
 WORKDIR /app
 
 # Install dependencies
 FROM base AS deps
-COPY package.json bun.lockb ./
-RUN bun install --frozen-lockfile
+COPY package.json  ./
+RUN npm install --frozen-lockfile
 
 # Build application
 FROM base AS builder
@@ -12,10 +12,10 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Generate Prisma Client
-RUN bunx prisma generate
+RUN npm run prisma generate
 
 # Build Next.js
-RUN bun run build
+RUN npm run build
 
 # Production image
 FROM base AS runner

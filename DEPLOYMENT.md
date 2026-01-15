@@ -93,9 +93,9 @@ git push origin main
 3. Import your Git repository
 4. Configure project:
    - **Framework**: Next.js (auto-detected)
-   - **Build Command**: `bun run build`
+   - **Build Command**: `npm run build`
    - **Output Directory**: `.next`
-   - **Install Command**: `bun install`
+   - **Install Command**: `npm install`
 
 ### Step 3: Set Environment Variables
 
@@ -128,7 +128,7 @@ vercel login
 
 # Run migration
 vercel env pull .env.production
-bun run db:migrate:deploy
+npm run db:migrate:deploy
 ```
 
 **Your app is live!** 🎉 Visit the URL provided by Vercel.
@@ -167,8 +167,8 @@ NODE_ENV=production
 
 Railway auto-detects Next.js, but you can customize:
 
-- **Build Command**: `bun run build`
-- **Start Command**: `bun start`
+- **Build Command**: `npm run build`
+- **Start Command**: `npm start`
 
 ### Step 5: Deploy
 
@@ -230,7 +230,7 @@ Make sure your database schema is up to date:
 ```bash
 # For Vercel
 vercel env pull .env.production
-DATABASE_URL="your_production_url" bun run db:migrate:deploy
+DATABASE_URL="your_production_url" npm run db:migrate:deploy
 
 # Or use Prisma Studio to check
 DATABASE_URL="your_production_url" bunx prisma studio
@@ -332,8 +332,8 @@ DATABASE_URL="postgresql://...?pgbouncer=true"
 3. Check Node.js version compatibility (v18+)
 4. Test build locally:
    ```bash
-   NODE_ENV=production bun run build
-   NODE_ENV=production bun start
+   NODE_ENV=production npm run build
+   NODE_ENV=production npm start
    ```
 
 ### Issue: Slow database queries

@@ -59,10 +59,10 @@ DATABASE_URL="postgresql://postgres:yourpassword@db.xxxxx.supabase.co:5432/postg
 
 ```bash
 # Generate new Prisma client
-bun run db:generate
+npm run db:generate
 
 # Push schema to PostgreSQL
-bun run db:push
+npm run db:push
 ```
 
 This creates all tables in your PostgreSQL database.
@@ -94,7 +94,7 @@ DATABASE_URL="file:./db/custom.db" bunx prisma studio
 
 ```bash
 # Start development server
-bun run dev
+npm run dev
 
 # Visit http://localhost:8888
 # Try creating a blog post to test database connection
@@ -139,7 +139,7 @@ Then use different DATABASE_URL values per environment.
 
 **Fix:** Run migrations:
 ```bash
-bun run db:push
+npm run db:push
 ```
 
 ### Error: "connection refused"
@@ -167,8 +167,8 @@ DATABASE_URL="file:./db/custom.db"
 # Change provider to "sqlite"
 
 # Regenerate client
-bun run db:generate
-bun run db:push
+npm run db:generate
+npm run db:push
 ```
 
 ---
@@ -177,7 +177,7 @@ bun run db:push
 
 - [ ] PostgreSQL database created
 - [ ] Connection string added to `.env`
-- [ ] `bun run db:push` executed successfully
+- [ ] `npm run db:push` executed successfully
 - [ ] App runs without database errors
 - [ ] Can create/read blog posts
 - [ ] Ready for production deployment

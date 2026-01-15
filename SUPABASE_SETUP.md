@@ -193,7 +193,7 @@ Open your terminal/command prompt in your project folder.
 Run this command:
 
 ```bash
-bun run db:generate
+npm run db:generate
 ```
 
 You should see:
@@ -208,7 +208,7 @@ If you get an error, check your DATABASE_URL has correct password.
 Run this command:
 
 ```bash
-bun run db:push
+npm run db:push
 ```
 
 This will:
@@ -239,7 +239,7 @@ If it asks "Do you want to continue?", type: **y** and press Enter
 Start your app:
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 Visit: http://localhost:8888
@@ -373,25 +373,25 @@ Once connected, explore these features:
 
 ```bash
 # Generate Prisma client
-bun run db:generate
+npm run db:generate
 
 # Push schema to database
-bun run db:push
+npm run db:push
 
 # Migrate database
-bun run db:migrate:deploy
+npm run db:migrate:deploy
 
 # Open Prisma Studio (view data)
 bunx prisma studio
 
 # Start dev server
-bun run dev
+npm run dev
 
 # Build for production
-bun run build
+npm run build
 
 # Start production server
-bun start
+npm start
 ```
 
 ---
@@ -443,7 +443,7 @@ After deployment to Vercel:
 
 **Fix**:
 ```bash
-bun run db:generate
+npm run db:generate
 ```
 
 ### ❌ Error: "FATAL: remaining connection slots reserved for non-replication superuser connections"
@@ -464,7 +464,7 @@ DATABASE_URL="postgresql://postgres:PASSWORD@db.xxx.supabase.co:6543/postgres"
 
 **Fix**:
 ```bash
-bun run db:push
+npm run db:push
 ```
 
 ### ❌ Error: "502 Bad Gateway" on Vercel

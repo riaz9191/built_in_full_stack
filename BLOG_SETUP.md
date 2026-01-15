@@ -35,7 +35,7 @@ After adding the API key, restart the development server:
 # The server should auto-restart, but if not:
 # Stop the current server (Ctrl+C)
 # Then start it again:
-bun run dev
+npm run dev
 ```
 
 ## How to Use
